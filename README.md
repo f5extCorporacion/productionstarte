@@ -502,31 +502,7 @@ pnpm --filter @gsoft/backend test:watch  # Watch mode
 | Code quality       | Code Climate                                                       |
 | Containers         | Docker + Docker Compose                                            |
 
-## 🤝 Contributing
 
-- Use `pnpm` only (enforced via `preinstall` hook and `.npmrc`)
-- Follow [Conventional Commits](https://www.conventionalcommits.org/): `type(scope): message`
-- Types: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, `wip`, `hotfix`
-- Scopes: `backend`, `frontend`, `root`, `ci`, `deps`, `release`
-- Subject: lowercase, 10–100 characters
-- All new endpoints need: validation → service → controller → route → tests
-- Pre-commit hooks run lint-staged (ESLint + Prettier) via Husky
-- Commit messages are validated by commitlint
-- See `CONTRIBUTING.md` for full guidelines
-
-## 📄 License
-
-[MIT](LICENSE)
-
----
-
-<div align="center">
-
-**Built and maintained by [Global Software Consulting](https://github.com/Global-Software-Consulting)**
-
-We build production software, AI agents, and developer tools for startups and enterprises.
-
-<a href="https://gsoftconsulting.com/">Website</a> &nbsp;&middot;&nbsp; <a href="mailto:sales@gsoftconsulting.com">Hire Us</a> &nbsp;&middot;&nbsp; <a href="https://pk.linkedin.com/company/global-software-consulting">LinkedIn</a>
 
 </div>
 
