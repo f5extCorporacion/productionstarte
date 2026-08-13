@@ -1,6 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,6,12,14,24&height=160&section=header&text=Node.js%20Production%20Starter&fontSize=36&fontColor=ffffff&animation=twinkling&fontAlignY=36&desc=Express%20%E2%80%A2%20MongoDB%20%E2%80%A2%20JWT%20Auth%20%E2%80%A2%20Docker%20%E2%80%A2%20CI%2FCD&descAlignY=58&descSize=14&descColor=a8b2d8" width="100%" />
-</div>
+
 
 <div align="center">
 
@@ -363,12 +362,6 @@ Configure SMTP settings via environment variables.
 - **toJSON** — removes `__v`, timestamps, private fields; replaces `_id` with `id`
 - **paginate** — adds `.paginate(filter, { sortBy, limit, page })` to models
 
-### ⚙️ Process Management
-
-PM2 in production (`ecosystem.config.json`):
-
-- Single instance, auto-restart, timestamp logging
-- Start with `pnpm start` or `pnpm docker:prod`
 
 ## 🖥️ Frontend
 
@@ -411,15 +404,7 @@ Configured in `.releaserc.json`:
 - Commits `CHANGELOG.md` and `package.json` back to the repo
 - Creates a GitHub release
 
-### 🤖 Dependabot
 
-Automated weekly dependency updates (Mondays):
-
-- Separate groups: root, backend (minor/patch), GitHub Actions
-- PR limits: 10 (root/backend), 5 (actions)
-- Commit prefix: `chore(deps):` or `chore(ci):`
-
-## ✨ Code Quality
 
 ### 🔍 ESLint
 
@@ -452,32 +437,6 @@ Complexity thresholds:
 | `commit-msg` | Runs commitlint (validates conventional commit format)                                               |
 
 ### 👥 CODEOWNERS
-
-```
-*                                           @gsoft/engineering
-/*.config.js, /.github/                     @gsoft/platform-team
-/services/backend/                          @gsoft/backend-team
-/services/backend/src/middlewares/auth.js   @gsoft/backend-team @gsoft/security-team
-```
-
-## 🧪 Testing
-
-- **Framework:** Jest + Supertest
-- **Structure:** `services/backend/tests/` — `fixtures/`, `integration/`, `unit/`, `utils/`
-- **Database:** `setupTestDB` helper handles MongoDB setup/teardown per test suite
-- **Data:** Faker for test data generation
-- **Coverage:** `text`, `lcov`, `clover`, `html` reporters
-- **Patterns:**
-  - Test both success and error cases
-  - Test authentication and authorization separately
-  - Verify response status codes and body structure
-  - No shared state between tests
-
-```bash
-pnpm test             # Run all tests
-pnpm test:ci          # Tests with coverage (CI)
-pnpm --filter @gsoft/backend test:watch  # Watch mode
-```
 
 ## 🧰 Tech Stack
 
